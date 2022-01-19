@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.poc.v1;
+
+option java_package = "com.poc.api.grpc.v1";
+
+option java_multiple_files = true;
+
+// The greeting service definition.
+service MyService {
+
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+  }
+}
+
+message HelloRequest{
+  string name = 1;
+}
+message HelloReply{
+
+  string text = 1;
+}
